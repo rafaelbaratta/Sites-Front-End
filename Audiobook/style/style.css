@@ -1,0 +1,163 @@
+/***** CONTROLE DE CORES DA PÁGINA *****/
+
+:root {
+    --light-blue: #e8f0f8;
+    --dark-blue: #a8c8e8;
+
+    --light-yellow: #fff9e6;
+    --dark-yellow: #ffe699;
+    
+    --light-red: #f8e8e8;
+    --dark-red: #e8a8a8;
+    
+    --light-green: #e8f5e8;
+    --dark-green: #a8d5a8;
+
+    --light-orange: #fff0e6;
+    --dark-orange: #ffcc99;
+
+    --light-purple: #f0e8f8;
+    --dark-purple: #d8a8e8;
+
+    --standard-color: black;
+    --light-standard-color: var(--light-blue);
+    --dark-standard-color: var(--dark-blue);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --light-blue: #0b3163;
+        --dark-blue: #0a1a2f;
+
+        --light-yellow: #665200;
+        --dark-yellow: #332900;
+        
+        --light-red: #5f1a1a;
+        --dark-red: #2f0a0a;
+        
+        --light-green: #1a5f1a;
+        --dark-green: #0a2f0a;
+
+        --light-orange: #663300;
+        --dark-orange: #331900;
+
+        --light-purple: #3a1a5f;
+        --dark-purple: #1a0a2f;
+
+        --standard-color: white;
+        --light-standard-color: var(--light-blue);
+        --dark-standard-color: var(--dark-blue);
+    }
+}
+
+/***** ESTILOS PADRÕES DA PÁGINA *****/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: var(--standard-color);
+    height: 100dvh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, var(--light-standard-color), var(--dark-standard-color));
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    overflow: auto;
+}
+
+.container-book {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+img {
+    border: 4px solid rgb(0, 0, 0, 0.15);
+}
+
+/***** ESTILOS PARA OS BOTÕES DE CONTROLE DO AUDIOBOOK *****/
+
+.container-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.control-button {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    color: inherit;
+}
+
+#play {
+    display: block;
+    height: 60px;
+    width: 60px;
+}
+
+#pause {
+    display: none;
+    height: 60px;
+    width: 60px;
+}
+
+/***** ESTILOS PARA OS BOTÕES DE SELEÇÃO DE CORES DE FUNDO *****/
+
+.container-color-selector {
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.color-selector {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#blue {
+    border: solid 1px var(--dark-blue);
+    background-image: linear-gradient(to bottom, var(--light-blue), var(--dark-blue));
+}
+
+#yellow {
+    border: solid 1px var(--dark-yellow);
+    background-image: linear-gradient(to bottom, var(--light-yellow), var(--dark-yellow));
+}
+
+#red {
+    border: solid 1px var(--dark-red);
+    background-image: linear-gradient(to bottom, var(--light-red), var(--dark-red));
+}
+
+#green {
+    border: solid 1px var(--dark-green);
+    background-image: linear-gradient(to bottom, var(--light-green), var(--dark-green));
+}
+
+#orange {
+    border: solid 1px var(--dark-orange);
+    background-image: linear-gradient(to bottom, var(--light-orange), var(--dark-orange));
+}
+
+#purple {
+    border: solid 1px var(--dark-purple);
+    background-image: linear-gradient(to bottom, var(--light-purple), var(--dark-purple));
+}
