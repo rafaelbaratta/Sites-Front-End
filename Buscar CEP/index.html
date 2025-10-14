@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Buscar por CEP</title>
+    <link rel="shortcut icon" href="./assets/icone.png">
+
+    <link href="./style/Style.css" rel="stylesheet"/>
+    <script src="./script/Script.js" defer></script>
+</head>
+
+<body>
+
+        <header>
+            <img class="logomarca" src="./assets/icone.png" />
+            <h2 class="barra-titulo textos">Buscar por CEP</h2>
+        </header>
+
+        <main>
+            <h2 class="textos">Buscar Endereço por CEP</h2>
+            <br />
+
+            <h4 class="textos">Insira um CEP</h4>
+            <input type="text" placeholder="Insira apenas números" id="cep" onkeypress="verificarEnter(event)" onblur="mascaraCep()">
+            <br />
+
+            <button onclick="buscarCep()">Procurar Endereço</button>
+            <br />
+            <br />
+
+            <input type="text" id="logradouro" placeholder="Logradouro" disabled readonly/>
+            <br />
+
+            <input type="text" id="bairro" placeholder="Bairro" disabled readonly/>
+            <br />
+
+            <input type="text" id="cidade" placeholder="Cidade" disabled readonly/>
+            <br />
+
+            <input style="width: 225px;"type="text" id="estado" placeholder="Estado" disabled readonly/>
+            <input style="width: 40px; margin-left: 10px;" type="text" id="uf" placeholder="UF" disabled readonly/>
+
+        </main>
+
+
+</body>
+</html>

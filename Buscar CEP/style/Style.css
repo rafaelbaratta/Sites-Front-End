@@ -1,0 +1,83 @@
+﻿.textos {
+    font-family: Arial;
+    color: white;
+}
+
+body {
+    background-color: #e8e8e8;
+    margin: 0;
+}
+
+header {
+    box-sizing: border-box;
+    min-height: 50px;
+    width: 100%;
+    background-color: #990100;
+    padding: 20px;
+}
+
+.logomarca {
+    top: 0;
+    left: 40px;
+    height: 60px;
+    width: 60px;
+}
+
+.barra-titulo {
+    position: absolute;
+    top: 10px;
+    left: 110px;
+    bottom: 40px;
+    height: 30px;
+    padding: 14px;
+    font-family: Arial;
+}
+
+main {
+    position: relative;
+    max-width: 700px;
+    min-height: 500px;
+    margin: 30px auto;
+    background-color: #333333;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+input {
+    padding: 10px;
+    margin-top: 15px;
+    height: 20px;
+    width: 300px;
+    border: 1px solid #b90504;
+    box-shadow: 2px 2px #990100;
+    border-radius: 5px;
+    font-size: 16px;
+    color: black;
+}
+
+    input:disabled {
+        margin-top: 15px;
+        background-color: darkgray;
+        border: 1px solid gray;
+        box-shadow: 2px 2px gray;
+    }
+
+button {
+    margin-top: 40px;
+    height: 40px;
+    width: 300px;
+    background-color: #b90504;
+    border: 1px solid #750302;
+    box-shadow: 2px 2px #750302;
+    border-radius: 10px;
+    font-size: 16px;
+    color: white;
+}
+
+    button:active {
+        background-color: #750302;
+        border: 2px solid #870302;
+        box-shadow: 2px 2px #870302;
+    }

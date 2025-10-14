@@ -1,0 +1,79 @@
+:root {
+    --lightGray: #DDDDDD;
+    --darkGray: #111111;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+    color: var(--fontColor);
+    margin: 0;
+}
+
+header {
+    box-sizing: border-box;
+    min-height: 50px;
+    width: 100%;
+    background-color: var(--headerBackground);
+    padding: 20px;
+}
+
+.logo {
+    top: 0;
+    left: 40px;
+    height: 60px;
+    width: 60px;
+}
+
+.title-bar {
+    position: absolute;
+    top: 10px;
+    left: 110px;
+    bottom: 40px;
+    height: 30px;
+    padding: 14px;
+    color: var(--fontColor);
+}
+
+.light-theme {
+    --background: var(--white);
+    --fontColor: var(--black);
+    --btnBackground: var(--lightGray);
+    --btnFontColor: var(--black);
+    --headerBackground: var(--lightGray);
+}
+
+.dark-theme {
+    --background: var(--black);
+    --fontColor: var(--white);
+    --btnBackground: var(--darkGray);
+    --btnFontColor: var(--white);
+    --headerBackground: var(--darkGray);
+}
+
+.botao {
+    color: var(--btnFontColor);
+    background-color: var(--btnBackground);
+    width: 250px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+    display: flex;
+    margin: 10px auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner {
+    display: block;
+    margin: 50px auto;
+    height: 300px;
+    width: 80%;
+}
+
+p, h2 {
+    text-align: center;
+}
