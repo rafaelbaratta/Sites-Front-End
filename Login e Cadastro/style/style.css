@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: 2px solid #ff6701;
+    outline-offset: 2px;
+}
+
+:root {
+    --background-1: #ffffff;
+    --background-2: #e4e3e3;
+
+    --button-1: #42771e;
+    --button-2: #579e27;
+
+    --button-1-active: #274711;
+    --button-2-active: #3c6d1b;
+
+    --color: #414141;
+
+    --mandatory-color: #c00101;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-1: #161616;
+        --background-2: #2e2e2e;
+        
+        --button-1: #274711;
+        --button-2: #3c6d1b;
+
+        --button-1-active: #42771e;
+        --button-2-active: #579e27;
+
+        --color: #ffffff;
+
+        --mandatory-color: #ff6b6b;
+    }
+}
+
+/* Estilos para os textos da página */
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color);
+}
+
+input {
+    color: var(--color);
+}
+
+p, label {
+    color: var(--color);
+    font-size: 18px;
+}
+
+a {
+    text-decoration: underline;
+    color: #ff6701;
+}
+
+    a:hover {
+        color: #fc7d29;
+    }
+
+    a:active {
+        color: #ce5403;
+    }
+
+/* Estilos para o corpo da página */
+
+html, body {
+    height: 100dvh;
+    margin: 0;
+    font-family: Calibri;
+    background-color: var(--background-1);
+    overflow-y: auto;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80dvh;
+    width: 100%;
+    padding: 20px;
+}
+
+form {
+    height: auto;
+    background-color: var(--background-1);
+    border-radius: 15px;
+    box-shadow: 0 0 20px 5px #6161614d;
+    margin: auto;
+    padding: 40px;
+    max-width: 50%;
+    min-width: 30%;
+}
+
+/* Estilos para o cabeçalho da página */
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 50px;
+    gap: 20px;
+    width: 100%;
+    background: linear-gradient(90deg, #fa3c3c 0%, #fa802f 14%, #fa9552 100%);
+    padding: 20px;
+    box-shadow: 0 8px 20px #0000004d;
+}
+
+.logo {
+    margin-right: 20px;
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.title-bar {
+    color: white;
+}
+
+/* Estilos para customizações com <div> */
+
+.horizontal-bar {
+    background-color: #ff6701;
+    height: 4px;
+}
+
+/* Estilos para modificações de sessões */
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--background-2);
+}
+
+input[type="checkbox"]{
+    cursor: pointer;
+}
+
+.display-flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 10px;
+}
+
+.display-flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.gap-20px {
+    gap: 20px;
+}
+
+.gap-15px {
+    gap: 15px;
+}
+
+.invisible {
+    display: none;
+}
+
+/* Outros Estilos */
+
+.mandatory {
+    color: var(--mandatory-color);
+}
+
+.align-center {
+    text-align: center;
+}
+
+button {
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    font-family: Calibri;
+    font-size: 18px;
+    height: auto;
+    width: 70%;
+    align-self: center;
+    background: linear-gradient(180deg, var(--button-1), var(--button-2));
+    border-radius: 20px;
+    border: 1px solid var(--button-1);
+    border-right-width: 4px;
+    border-bottom-width: 4px;
+    cursor: pointer;
+    transition: transform 0.2s, padding-bottom 10s;
+}
+
+    button:hover {
+        transform: translateY(-1px);
+    }
+
+    button:active {
+        transform: translateY(1px);
+        background: linear-gradient(180deg, var(--button-1-active), var(--button-2-active));
+        border: 1px solid var(--button-1-active);
+        font-size: 20px;
+        padding: 8px;
+        border-right-width: 4px;
+        border-bottom-width: 4px;
+    }
+

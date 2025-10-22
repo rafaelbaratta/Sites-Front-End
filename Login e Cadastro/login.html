@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" href="./assets/user_black_solid.png" type="image/x-icon" media="(prefers-color-scheme: light)">
+        <link rel="shortcut icon" href="./assets/user_white_solid.png" type="image/x-icon" media="(prefers-color-scheme: dark)">
+
+        <link rel="stylesheet" href="./style/style.css">
+        <script src="./script/login.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        
+        <title>Cadastro e Login</title>
+    </head>
+
+    <body>
+        <header>
+            <img class="logo" src="./assets/user_white.png">
+            <h1 class="title-bar">Página de Login</h1>
+        </header>
+
+        <main>
+            <form class="display-flex-column gap-20px" onsubmit="return false;">
+                <h1>Bem-Vindo!</h1>
+                <div class="horizontal-bar"></div>
+                <h2>Faça login em sua conta</h2>
+
+                <section class="display-flex-column gap-20px">
+                    <label for="email">Seu e-mail: 
+                        <span class="mandatory">*</span>
+                        <span id="emailError" class="mandatory"></span>
+                    </label>
+                    <input id="email" type="email" required>
+                </section>
+
+                <section class="display-flex-column gap-20px">
+                    <label for="password">
+                        Sua senha: <span class="mandatory">*</span>
+                        <span id="passwordError" class="mandatory"></span>
+                    </label>
+                    <input id="password" type="password" required>
+                </section>
+
+                <section class="display-flex-row">
+                    <input id="rememberMe" type="checkbox">
+                    <p>Lembrar minha senha!</p>
+                </section>
+
+                <p class="align-center">
+                    Esqueceu sua senha? 
+                    <a href="#">Clique aqui!</a>
+                </p>
+
+                <button type="button" onclick="login()">Entrar</button>
+                
+                <p class="align-center">
+                    Não possui uma conta? 
+                    <a href="./cadastro.html">Cadastre-se!</a>
+                </p>
+            </form>
+        </main>
+    </body>
+</html>

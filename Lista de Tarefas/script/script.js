@@ -66,3 +66,27 @@ new Sortable(document.querySelector('.tasks'), {
     animation: 150,
     ghostClass: 'ghost',
 });
+
+function deletarTarefas() {
+    var TarefasAtuais = document.querySelectorAll(".delete");
+    for (var i = 0; i < TarefasAtuais.length; i++) {
+        const tarefa = TarefasAtuais[i].parentNode;
+        const separador = tarefa.nextElementSibling;
+        tarefa.remove();
+        if (separador && separador.tagName == "HR"){
+            separador.remove();
+        }
+    }
+}
+
+function deletarTarefasConcluidas() {
+    var TarefasAtuais = document.querySelectorAll(".checked");
+    for (var i = 0; i < TarefasAtuais.length; i++) {
+        const tarefa = TarefasAtuais[i].parentNode.parentNode;
+        const separador = tarefa.nextElementSibling;
+        tarefa.remove();
+        if (separador && separador.tagName == "HR"){
+            separador.remove();
+        }
+    }
+}

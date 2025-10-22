@@ -22,12 +22,18 @@
         <main class="container">
             <h1 id="head-text">Gerenciar Tarefas</h1>
             <div id="newtask">
-                <div class="date-time">
+                <div class="separator">
                     <input id="date-input" type="date">
                     <input id="time-input" type="time">
                 </div>
-                <input id="text-input" maxlength="100" type="text" placeholder="Adicionar uma tarefa">
-                <button onclick="criarTarefa()">Adicionar</button>
+                <div class="separator">
+                    <input id="text-input" maxlength="100" type="text" placeholder="Adicionar uma tarefa">
+                </div>
+                <div class="separator">
+                    <button onclick="criarTarefa()">Adicionar</button>
+                    <button onclick="deletarTarefasConcluidas()">Remover Concluídas</button>
+                    <button onclick="deletarTarefas()">Remover Todas</button>
+                </div>
             </div>
             <div class="task-container">
                 <div class="tasks"></div>

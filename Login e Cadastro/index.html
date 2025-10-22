@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" href="./assets/user_black_solid.png" type="image/x-icon" media="(prefers-color-scheme: light)">
+        <link rel="shortcut icon" href="./assets/user_white_solid.png" type="image/x-icon" media="(prefers-color-scheme: dark)">
+
+        <link rel="stylesheet" href="./style/style.css">
+        <script src="./script/index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        
+        <title>Cadastro e Login</title>
+    </head>
+
+    <body>
+        <header>
+            <img class="logo" src="./assets/user_white.png">
+            <h1 class="title-bar">Página Inicial</h1>
+        </header>
+
+        <main>
+            <form class="display-flex-column gap-20px" onsubmit="return false;">
+                <h1 id="title-h1">Ops!</h1>
+                <div class="horizontal-bar"></div>
+                <h2 id="title-h2">Você está logado em nosso site</h2>
+
+                <section class="display-flex-column gap-15px">
+                    <label id="nameLabel" for="name">Nome:</label>
+                    <input id="name" type="text" disabled readonly>
+                </section>
+
+                <section class="display-flex-column gap-20px">
+                    <label id="emailLabel" for="email">Seu e-mail:</label>
+                    <input id="email" type="email" disabled readonly>
+                </section>
+
+                <section class="display-flex-column gap-20px">
+                    <label id="passwordLabel" for="password">Sua senha:</label>
+                    <input id="password" type="text" disabled readonly>
+                </section>
+
+                <button id="button-return" type="button" onclick="logoff()">Sair</button>
+
+            </form>
+        </main>
+    </body>
+</html>
