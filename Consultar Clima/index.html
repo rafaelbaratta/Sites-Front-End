@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" href="./assets/weather.png" type="image/x-icon">
+        <link rel="stylesheet" href="./style/style.css">
+        <script src="./script/script.js" defer></script>
+
+        <title>Consultar Clima</title>
+    </head>
+
+    <body>
+        <header>
+            <img class="logo" src="./assets/weather.png" alt="Imagem de nuvem representando o tema do site">
+            <h1 id="title-bar">Consultar Clima</h1>
+            <img class="logo" src="./assets/weather.png" alt="Imagem de nuvem representando o tema do site">
+        </header>
+
+        <main>
+            <form onsubmit="loadData(event)">
+                <h2>Veja o clima em sua cidade!</h2>
+                
+                <label for="city">Digite o nome de sua cidade:</label>
+                <input id="city" type="text" onkeydown="verificarEnter(event)">
+
+                <button type="submit">Ver dados</button>
+            </form>
+
+            <section id="information" class="invisible">
+                <div class="pair">
+                    <h2 id="weather">Clima </h2>
+                    <img id="weather-image" src="" alt="">
+                </div>
+
+                <div class="pair">
+                    <p class="results"><strong>Temperatura: </strong><span id="temperature"></span></p>
+                    <p class="results"><strong>Sensação Térmica: </strong><span id="feelslike"></span></p>
+                </div>
+
+                <div class="pair">
+                    <p class="results"><strong>Mínima: </strong><span id="min"></span></p>
+                    <p class="results"><strong>Máxima: </strong><span id="max"></span></p>
+                </div>
+
+                <div class="pair">
+                    <p class="results"><strong>Velocidade do Vento: </strong><span id="wind-speed"></span></p>
+                    <p class="results"><strong>Direção: </strong><span id="wind-deg"></span></p>
+                </div>
+
+                <div class="pair">
+                    <p class="results"><strong>Umidade: </strong><span id="humidity"></span></p>
+                    <p class="results"><strong>Cobertura de Nuvens: </strong><span id="clouds"></span></p>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

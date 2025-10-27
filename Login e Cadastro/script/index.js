@@ -28,13 +28,7 @@ function loadData() {
         return;
     }
 
-    nameUser.parentNode.classList.add("invisible");
-    emailUser.parentNode.classList.add("invisible");
-    passwordUser.parentNode.classList.add("invisible");
-
-    title1.innerText = "Ops!"
-    title2.innerText = "Você precisa fazer login para continuar";
-    button.innerText = "Fazer login";
+    window.location.href = "login.html";
 }
 
 function logoff() {

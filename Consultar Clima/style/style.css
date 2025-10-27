@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media(max-width: 768px){
+    :root{
+        --width-main: 70%;
+        --width-header: 90%;
+    }
+}
+
+@media(min-width: 768px){
+    :root{
+        --width-main: 50%;
+        --width-header: 70%;
+    }
+}
+
+/* Estilos para o corpo da página */
+
+html, body {
+    height: 100dvh;
+    margin: 0;
+    font-family: Calibri;
+    background-color: #3D4FD4;
+    overflow-y: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: auto;
+    background-color: #0F249C;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 5px #0000004d;
+    margin: 60px auto;
+    padding: 40px;
+    width: var(--width-main);
+}
+
+form, section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+button {
+    align-self: center;
+    width: 40%;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    font-family: Calibri;
+    font-size: 20px;
+    align-self: center;
+    background: #3D4FD4;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.2s, padding-bottom 10s;
+}
+
+    button:hover {
+        transform: translateY(-1px);
+    }
+
+    button:active {
+        transform: translateY(1px);
+        background: #2E41C1;
+        border: 1px solid var(--button-1-active);
+        font-size: 20px;
+        padding: 10px;
+    }
+
+.results {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #2E41C1;
+    color: white;
+}
+
+.pair {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+}
+
+.invisible {
+    display: none;
+}
+
+#weather {
+    line-height: 60px;
+}
+
+#weather-image {
+    max-width: 60px;
+    max-height: 60px;
+}
+
+/* Estilos para os textos da página */
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    color: white;
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #2E41C1;
+    color: white;
+    width: 50%;
+    margin: auto;
+}
+
+    input:focus{
+        outline: 2px solid #3D4FD4;
+        outline-offset: 2px;
+    }
+
+label {
+    color: white;
+    font-size: 18px;
+    width: 50%;
+    margin: auto;
+}
+
+/* Estilos para o cabeçalho da página */
+
+header {
+    margin: 30px auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 50px;
+    width: var(--width-header);
+    background: #001589;
+    padding: 20px;
+    box-shadow: 0 8px 20px #0000004d;
+    border-radius: 20px;
+}
+
+.logo {
+    margin-left: 30px;
+    margin-right: 30px;
+    max-width: 60px;
+    max-height: 60px;
+}
+
+#title-bar {
+    width: 100%;
+}
