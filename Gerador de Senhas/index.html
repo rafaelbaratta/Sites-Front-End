@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="./style/style.css">
+        <link rel="shortcut icon" href="./assets/password-icon.png" type="image/x-icon">
+        <script src="./script/script.js" defer></script>
+
+        <title>Gerador de Senhas</title>
+    </head>
+
+    <body>
+        <header>
+            <img class="logo" src="./assets/key-logo.png" alt="Ícone de senha">
+            <h1 class="title-bar">Gerador de Senhas Automático</h1>
+        </header>
+
+        <main class="display-column">
+            <h1>Gere Sua Senha Personalizada</h1>
+
+            <div class="horizontal-bar"></div>
+
+            <section class="display-column">
+                <h2>Sua Senha Gerada:</h2>
+                <div id="password-container" class="display-row">
+                    <p id="password-generated"></p>
+                    <button id="copy-button" title="Copiar para a área de transferência">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75" />
+                        </svg>
+                    </button>
+                </div>
+            </section>
+            
+            <section class="display-column">
+                <h2>Comprimento da Senha:</h2>
+                <div class="display-row">
+                    <input id="range-input" type="range" min="2" max="50" value="26">
+                    <div id="length-display-container">
+                        <p id="length-display">25</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="display-column">
+                <h2>Defina suas Preferências:</h2>
+                
+                <div class="display-row">
+                    <input id="uppercase-letters" class="checkbox-input" type="checkbox" checked>
+                    <p>Incluir Letras Maiúsculas</p>
+                </div>
+                <div class="display-row">
+                    <input id="lowercase-letters" class="checkbox-input" type="checkbox" checked>
+                    <p>Incluir Letras Minúsculas</p>
+                </div>
+                <div class="display-row">
+                    <input id="numbers" class="checkbox-input" type="checkbox" checked>
+                    <p>Incluir Números</p>
+                </div>
+                <div class="display-row">
+                    <input id="symbols" class="checkbox-input" type="checkbox" checked>
+                    <p>Incluir Símbolos Especiais</p>
+                </div>
+            </section>
+
+            <button id="generate-button" onclick="generatePassword()">Gerar Senha</button>
+        </main>
+    </body>
+</html>
