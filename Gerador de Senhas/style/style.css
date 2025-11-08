@@ -246,11 +246,14 @@ main {
     padding: 15px;
     border: 1px solid var(--color-pattern1);
     border-radius: 10px;
-    word-wrap: break-word;
     font-size: var(--font-big);
     color: var(--color);
     min-height: 40px;
     justify-content: space-between;
+}
+
+#password-generated {
+    word-break: break-all;
 }
 
 /* Estilos para o cabeçalho da página */
