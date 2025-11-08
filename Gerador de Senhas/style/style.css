@@ -18,6 +18,17 @@
     --color-pattern2: #e8a726;
 
     --color: #414141;
+
+    --width-main: 80%;
+
+    --img-logo-size: 30px;
+
+    --font-heading1: 24px;
+    --font-heading2: 20px;
+
+    --font-standard: 14px;
+    --font-small: 10px;
+    --font-big: 16px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -35,15 +46,18 @@
     }
 }
 
-@media(max-width: 768px){
-    :root{
-        --width-main: 80%;
-    }
-}
-
 @media(min-width: 768px){
     :root{
         --width-main: 40%;
+
+        --img-logo-size: 50px;
+
+        --font-heading1: 32px;
+        --font-heading2: 24px;
+
+        --font-standard: 18px;
+        --font-small: 14px;
+        --font-big: 20px;
     }
 }
 
@@ -66,6 +80,12 @@
 
 /* Estilos para os botões da página */
 
+button {
+    font-family: Calibri;
+    font-size: var(--font-standard);
+    font-weight: bold;
+}
+
 #copy-button {
     min-width: 25px;
     height: 25px;
@@ -78,9 +98,6 @@
 #generate-button {
     padding: 10px;
     color: white;
-    font-weight: bold;
-    font-family: Calibri;
-    font-size: 18px;
     height: auto;
     width: 70%;
     align-self: center;
@@ -101,7 +118,7 @@
         transform: translateY(1px);
         background: linear-gradient(180deg, var(--button-1-active), var(--button-2-active));
         border: 1px solid var(--button-1-active);
-        font-size: 20px;
+        font-size: var(--font-big);
         padding: 8px;
         border-right-width: 4px;
         border-bottom-width: 4px;
@@ -164,7 +181,7 @@
     content: "✓";
     position: absolute;
     color: white;
-    font-size: 14px;
+    font-size: var(--font-small);
     font-weight: bold;
     top: 45%;
     left: 50%;
@@ -177,13 +194,19 @@
 
 /* Estilos para os textos da página */
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
     color: var(--color);
+    font-size: var(--font-heading1);
+}
+
+h2 {
+    color: var(--color);
+    font-size: var(--font-heading2);
 }
 
 p {
     color: var(--color);
-    font-size: 18px;
+    font-size: var(--font-standard);
 }
 
 /* Estilos para o corpo da página */
@@ -224,7 +247,7 @@ main {
     border: 1px solid var(--color-pattern1);
     border-radius: 10px;
     word-wrap: break-word;
-    font-size: 20px;
+    font-size: var(--font-big);
     color: var(--color);
     min-height: 40px;
     justify-content: space-between;
@@ -246,8 +269,8 @@ header {
 
 .logo {
     margin-right: 20px;
-    max-width: 50px;
-    max-height: 50px;
+    max-width: var(--img-logo-size);
+    max-height: var(--img-logo-size);
 }
 
 .title-bar {

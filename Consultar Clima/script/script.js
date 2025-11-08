@@ -1,3 +1,5 @@
+const API_KEY = "20e49a000cb43b4962307f0146c81c8e";
+
 function verificarEnter(event) {
     if (event.key === "Enter") {
         loadData();
@@ -17,7 +19,7 @@ function loadData(event) {
         return;
     }
 
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${YOUR_API_KEY}&units=metric&lang=pt_br`).then(response => response.json()).then(data => {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric&lang=pt_br`).then(response => response.json()).then(data => {
         if (data.cod == "404") {
             alert("Cidade não encontrada!\nVerifique se o nome foi digitado corretamente!");
             return;

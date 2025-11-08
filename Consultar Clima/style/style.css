@@ -4,17 +4,35 @@
     box-sizing: border-box;
 }
 
-@media(max-width: 768px){
-    :root{
-        --width-main: 70%;
-        --width-header: 90%;
-    }
+:root{
+    --width-main: 70%;
+    --width-header: 90%;
+
+    --img-size: 40px;
+
+    --font-heading1: 24px;
+    --font-heading2: 20px;
+
+    --font-standard: 14px;
+    --font-big: 16px;
+
+    --label-input-width: 90%;
 }
 
 @media(min-width: 768px){
     :root{
         --width-main: 50%;
         --width-header: 70%;
+
+        --img-size: 60px;
+
+        --font-heading1: 32px;
+        --font-heading2: 24px;
+
+        --font-standard: 18px;
+        --font-big: 20px;
+
+        --label-input-width: 50%;
     }
 }
 
@@ -54,7 +72,7 @@ button {
     color: white;
     font-weight: bold;
     font-family: Calibri;
-    font-size: 20px;
+    font-size: var(--font-big);
     align-self: center;
     background: #3D4FD4;
     border: none;
@@ -71,7 +89,7 @@ button {
         transform: translateY(1px);
         background: #2E41C1;
         border: 1px solid var(--button-1-active);
-        font-size: 20px;
+        font-size: var(--font-big);
         padding: 10px;
     }
 
@@ -100,15 +118,22 @@ button {
 }
 
 #weather-image {
-    max-width: 60px;
-    max-height: 60px;
+    max-width: var(--img-size);
+    max-height: var(--img-size);
 }
 
 /* Estilos para os textos da página */
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
     text-align: center;
     color: white;
+    font-size: var(--font-heading1);
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    font-size: var(--font-heading2);
 }
 
 input {
@@ -117,7 +142,7 @@ input {
     border: none;
     background-color: #2E41C1;
     color: white;
-    width: 50%;
+    width: var(--label-input-width);
     margin: auto;
 }
 
@@ -128,8 +153,8 @@ input {
 
 label {
     color: white;
-    font-size: 18px;
-    width: 50%;
+    font-size: var(--font-standard);
+    width: var(--label-input-width);
     margin: auto;
 }
 
@@ -151,8 +176,8 @@ header {
 .logo {
     margin-left: 30px;
     margin-right: 30px;
-    max-width: 60px;
-    max-height: 60px;
+    max-width: var(--img-size);
+    max-height: var(--img-size);
 }
 
 #title-bar {

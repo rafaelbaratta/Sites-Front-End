@@ -22,6 +22,16 @@
     --color: #414141;
 
     --mandatory-color: #c00101;
+
+    --width-form: 70%;
+
+    --img-logo-size: 30px;
+
+    --font-heading1: 24px;
+    --font-heading2: 20px;
+
+    --font-standard: 14px;
+    --font-big: 16px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -41,22 +51,30 @@
     }
 }
 
-@media(max-width: 768px){
-    :root{
-        --width-form: 70%;
-    }
-}
-
 @media(min-width: 768px){
     :root{
         --width-form: 30%;
+
+        --img-logo-size: 50px;
+
+        --font-heading1: 32px;
+        --font-heading2: 24px;
+
+        --font-standard: 18px;
+        --font-big: 20px;
     }
 }
 
 /* Estilos para os textos da página */
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
     color: var(--color);
+    font-size: var(--font-heading1);
+}
+
+h2 {
+    color: var(--color);
+    font-size: var(--font-heading2);
 }
 
 input {
@@ -65,7 +83,7 @@ input {
 
 p, label {
     color: var(--color);
-    font-size: 18px;
+    font-size: var(--font-standard);
 }
 
 a {
@@ -127,8 +145,8 @@ header {
 
 .logo {
     margin-right: 20px;
-    max-width: 50px;
-    max-height: 50px;
+    max-width: var(--img-logo-size);
+    max-height: var(--img-logo-size);
 }
 
 .title-bar {
@@ -190,7 +208,7 @@ button {
     color: white;
     font-weight: bold;
     font-family: Calibri;
-    font-size: 18px;
+    font-size: var(--font-standard);
     height: auto;
     width: 70%;
     align-self: center;
@@ -211,7 +229,7 @@ button {
         transform: translateY(1px);
         background: linear-gradient(180deg, var(--button-1-active), var(--button-2-active));
         border: 1px solid var(--button-1-active);
-        font-size: 20px;
+        font-size: var(--font-big);
         padding: 8px;
         border-right-width: 4px;
         border-bottom-width: 4px;
