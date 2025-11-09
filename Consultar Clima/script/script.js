@@ -1,4 +1,4 @@
-const API_KEY = "20e49a000cb43b4962307f0146c81c8e";
+const API_KEY = process.env.YOUR_API_KEY;
 
 function verificarEnter(event) {
     if (event.key === "Enter") {
